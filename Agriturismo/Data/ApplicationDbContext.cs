@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using Agriturismo.Models;
 
 namespace Agriturismo.Data
 {
@@ -11,6 +11,9 @@ namespace Agriturismo.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+          
         }
+
+        public DbSet<Guest> Guests { get; set; }
     }
 }
