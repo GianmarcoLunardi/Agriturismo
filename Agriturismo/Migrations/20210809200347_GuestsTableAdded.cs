@@ -2,7 +2,7 @@
 
 namespace Agriturismo.Migrations
 {
-    public partial class GuesteTableAdd : Migration
+    public partial class GuestsTableAdded : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -27,14 +27,22 @@ namespace Agriturismo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<IdentityAgriContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("ConnectionData")));
+                    Configuration.GetConnectionString("ConnectionIdentity")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                .AddEntityFrameworkStores<IdentityAgriContext>();
             services.AddControllersWithViews();
+
+            // Data WebSite
+
+            services.AddDbContext<DataAgriContext>(options =>
+    options.UseSqlServer(
+        Configuration.GetConnectionString("ConnectionData")));
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
