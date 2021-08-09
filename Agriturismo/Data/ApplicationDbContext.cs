@@ -27,6 +27,11 @@ namespace Agriturismo.Data
 
         public DbSet<Guest> Guests { get; set; }
         public DbSet<Appartament> Appartaments { get; set; }
+
+        public DbSet<Reservation> Reservations { get; set; }
         
+
+
+
     }
 }
