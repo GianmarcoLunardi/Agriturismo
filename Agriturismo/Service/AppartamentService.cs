@@ -4,43 +4,40 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Agriturismo.Data;
-
 namespace Agriturismo.Service
 {
     /*
-    public class GuestService : IGuests
+    public class AppartamentService : IAppartamts
     {
         private readonly DataAgriContext GuestContext;
-        public GuestService(DataAgriContext g)
+        public AppartamentService(DataAgriContext g)
         {
             GuestContext = g;
         }
-        
-        public Task add(Guest t)
+        Task Irepo<Appartament, int>.add(Appartament t)
         {
             throw new NotImplementedException();
         }
 
-        public Task delete(Guest t)
+        Task Irepo<Appartament, int>.delete(Appartament t)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Guest> display(int x)
+        Task<Appartament> Irepo<Appartament, int>.display(int x)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Guest>> displayAll()
+        Task<IEnumerable<Appartament>> Irepo<Appartament, int>.displayAll()
         {
             throw new NotImplementedException();
         }
 
-        public Task<Guest> Update(Guest t)
+        Task<Appartament> Irepo<Appartament, int>.Update(Appartament t)
         {
             throw new NotImplementedException();
         }
     }
-
     */
 }

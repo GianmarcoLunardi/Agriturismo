@@ -12,6 +12,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Agriturismo.Models;
+using Agriturismo.Service;
 
 namespace Agriturismo
 {
@@ -41,6 +43,9 @@ namespace Agriturismo
             services.AddDbContext<DataAgriContext>(options =>
     options.UseSqlServer(
         Configuration.GetConnectionString("ConnectionData")));
+
+            // Aggiungo UTE
+            services.AddTransient<Irepo<Appartament,int> , GenericRepoIrepo < Appartament, int>>();
 
 
         }
