@@ -22,12 +22,42 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Administrator" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="User" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Administrator" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="User" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Apartmets
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" asp-area="Administrator" asp-controller="Home" asp-action="ApartmentsAdd">Add</a>
+                                <a class="dropdown-item" asp-area="Administrator" asp-controller="Home" asp-action="ApartmentsDisplay">Display</a>
+
+                                
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+
+
                     </ul>
+                    <!--
+                        
+                    
+                        -->
+
+
+                    <!--
+             <a class="nav-link text-dark" asp-area="Administrator" asp-controller="Home" asp-action="ApartmentsAdd">Add</a>
+         -->
+
+
+
+
                     <partial name="_LoginPartial" />
                 </div>
             </div>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Agriturismo.Data;
 namespace Agriturismo.Service
 {
-    /*
+ /*
     public class AppartamentService : IAppartamts
     {
         private readonly DataAgriContext GuestContext;
@@ -39,5 +39,5 @@ namespace Agriturismo.Service
             throw new NotImplementedException();
         }
     }
-    */
+ */
 }

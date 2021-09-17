@@ -29,59 +29,63 @@ namespace Agriturismo.Service
             this.context = c;
         }
 
-        async Task add(T t)
+        async Task Irepo<T, PKey>.add(T t)
         {
              await context.Set<T>().AddAsync(t);
             await context.SaveChangesAsync();
     }
 
+        /*
         Task Irepo<T, PKey>.add(T t)
         {
             throw new NotImplementedException();
         }
-
-        async Task delete(T t)
+        */
+        async Task Irepo<T, PKey>.delete(T t)
         {
             context.Set<T>().Remove(t);
             await context.SaveChangesAsync();
     }
+        /*
 
         Task Irepo<T, PKey>.delete(T t)
         {
             throw new NotImplementedException();
-        }
+        }*/
 
-        async Task<T> Get(PKey i)
+        async Task<T> Irepo<T, PKey>.Get(PKey i)
         {
             return await context.Set<T>().FindAsync(i);
                 
                 
         }
-
+        /*
         Task<T> Irepo<T, PKey>.Get(PKey i)
         {
             throw new NotImplementedException();
         }
-
-        async Task<IEnumerable<T>> GetAll()
+        */
+        async Task<IEnumerable<T>> Irepo<T, PKey>.GetAll()
         {
             return context.Set<T>();
         }
-
+        /*
         Task<IEnumerable<T>> Irepo<T, PKey>.GetAll()
         {
             throw new NotImplementedException();
-        }
+        }*/
 
-        async Task Update(T t)
+        async Task Irepo<T, PKey>.Update(T t)
         {
-             context.Set<T>().Update(t);
+            context.Set<T>().Update(t);
+            await context.SaveChangesAsync();
         }
+        /*
 
         Task Irepo<T, PKey>.Update(T t)
         {
             throw new NotImplementedException();
-        }
+        }*/
     }
 
 

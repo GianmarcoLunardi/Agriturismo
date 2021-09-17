@@ -11,7 +11,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using AutoMapper;
 using Agriturismo.Models;
 using Agriturismo.Service;
 
@@ -46,6 +46,9 @@ namespace Agriturismo
 
             // Aggiungo UTE
             services.AddTransient<Irepo<Appartament,int> , GenericRepoIrepo < Appartament, int>>();
+
+            // Servizi Automapper
+            _ = services.AddAutoMapper(typeof(AutoMapper.AutoMapper));
 
 
         }

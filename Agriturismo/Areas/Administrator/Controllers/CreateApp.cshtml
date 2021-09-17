@@ -1,0 +1,59 @@
+﻿@page
+@model Agriturismo.Areas.Administrator.Controllers.CreateAppModel
+
+@{
+    ViewData["Title"] = "CreateApp";
+}
+
+<h1>CreateApp</h1>
+
+<h4>AppartamentVM</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AppartamentVM.Name" class="control-label"></label>
+                <input asp-for="AppartamentVM.Name" class="form-control" />
+                <span asp-validation-for="AppartamentVM.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AppartamentVM.Description_It" class="control-label"></label>
+                <input asp-for="AppartamentVM.Description_It" class="form-control" />
+                <span asp-validation-for="AppartamentVM.Description_It" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AppartamentVM.Description_Us" class="control-label"></label>
+                <input asp-for="AppartamentVM.Description_Us" class="form-control" />
+                <span asp-validation-for="AppartamentVM.Description_Us" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AppartamentVM.DoubleBed" class="control-label"></label>
+                <input asp-for="AppartamentVM.DoubleBed" class="form-control" />
+                <span asp-validation-for="AppartamentVM.DoubleBed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AppartamentVM.ExtraBed" class="control-label"></label>
+                <input asp-for="AppartamentVM.ExtraBed" class="form-control" />
+                <span asp-validation-for="AppartamentVM.ExtraBed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AppartamentVM.SofàBed" class="control-label"></label>
+                <input asp-for="AppartamentVM.SofàBed" class="form-control" />
+                <span asp-validation-for="AppartamentVM.SofàBed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

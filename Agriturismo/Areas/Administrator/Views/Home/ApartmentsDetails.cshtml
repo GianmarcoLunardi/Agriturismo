@@ -1,0 +1,54 @@
+﻿@model AutoMapper.AppartamentVM
+
+@{
+    ViewData["Title"] = "ApartmentsDetails";
+}
+
+<h1>ApartmentsDetails</h1>
+
+<div>
+    <h4>Appartament</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description_It)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description_It)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description_Us)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description_Us)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DoubleBed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DoubleBed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExtraBed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExtraBed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SofàBed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SofàBed)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="ApartmentDisplay">Back to List</a>
+</div>

@@ -4,19 +4,21 @@ using Agriturismo.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Agriturismo.Migrations
 {
     [DbContext(typeof(DataAgriContext))]
-    partial class DataAgriContextModelSnapshot : ModelSnapshot
+    [Migration("20210815092737_AppartamentiTableFixedFileda")]
+    partial class AppartamentiTableFixedFileda
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.8")
+                .HasAnnotation("ProductVersion", "5.0.5")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("Agriturismo.Models.Appartament", b =>
@@ -116,37 +118,6 @@ namespace Agriturismo.Migrations
                     b.HasIndex("GuestId");
 
                     b.ToTable("Reservations");
-                });
-
-            modelBuilder.Entity("AutoMapper.AppartamentVM", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Description_It")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Description_Us")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("DoubleBed")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ExtraBed")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("SofàBed")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("AppartamentVM");
                 });
 
             modelBuilder.Entity("Agriturismo.Models.Reservation", b =>

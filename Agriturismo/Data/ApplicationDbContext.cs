@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Agriturismo.Models;
+using AutoMapper;
 
 namespace Agriturismo.Data
 {
@@ -29,6 +30,10 @@ namespace Agriturismo.Data
         public DbSet<Appartament> Appartaments { get; set; }
 
         public DbSet<Reservation> Reservations { get; set; }
+
+        public DbSet<AutoMapper.AppartamentVM> AppartamentVM { get; set; }
+
+        //public DbSet<Agriturismo.Models.AppartamentVM> AppartamentVM { get; set; }
         
 
 
